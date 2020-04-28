@@ -7,9 +7,9 @@ RUN dpkg -i mysql-apt-config_0.8.13-1_all.deb
 RUN apt-get update
 RUN apt-get install -y mysql-server && apt-get install -y nodejs && apt-get install -y npm
 
-COPY nodejs/ /root/nodejs
+COPY nodejs/ /root/crud
 
-RUN cd /root/nodejs
+RUN cd /root/crud
 RUN npm install
 
 RUN /etc/init.d/mysql stop
