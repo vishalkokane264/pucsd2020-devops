@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({
 const mysql_conn = mysql.createConnection({
     host: 'localhost',
     user: 'vishal',
+    password:'Vishal@12',
     database: 'userdb'
 });
 mysql_conn.connect();
@@ -32,10 +33,15 @@ app.get('/user/:id', function (req, res) {
  
     let user_id = req.params.id;
  
-    if (!user_id) {
+    if (!user_id ) {
         return res.status(400).send({ error: true, message: 'Enter userID' });
     }
- 
+
+/*    if(!Number.isInteger(user_id)){
+        return res.status(400).send({ error: true, message: 'Invalid user id' });
+
+    }
+*/    
     mysql_conn.query('SELECT * FROM tasks where id=?', user_id, function (error, results, fields) {
         if (error) throw error;
         return res.end(JSON.stringify(results));
@@ -100,7 +106,7 @@ app.all("*", function (req, res, next) {
 
 app.listen(8080, function(){
 
-        console.log('App is running on port 8080');
+        console.log('App is running on port 8080 and expose on port 46150');
 
 });
 

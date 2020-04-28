@@ -1,5 +1,7 @@
-CREATE DATABASE userdb;
+CREATE USER vishal IDENTIFIED BY 'Vishal@12';
+GRANT ALL PRIVILEGES ON *.* to vishal;
 
+CREATE DATABASE userdb;
 USE userdb;
 
 CREATE TABLE `user`(
