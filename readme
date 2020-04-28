@@ -8,5 +8,5 @@ Install MySQL
 Then
 1)cd nodejs
 2)npm install
-3)node service.js
+3)node index.js
 ---------------------------
