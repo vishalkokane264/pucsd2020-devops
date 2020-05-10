@@ -17,7 +17,8 @@ RUN npm install
 RUN mysqld_safe & 
 CMD ["mysql -u root < /root/crud/database.sql"]
 RUN mysql --version
-EXPOSE 8080
+EXPOSE 3306
 CMD ["npm","install"]
 CMD ["node","/root/crud/service.js"]
+EXPOSE 8080
 
