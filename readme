@@ -1,12 +1,10 @@
-Compile using nodejs:
-Configuration:
+CRUD operations using restApi.
+NodeJS+ExpressJS+MySQL
 
-Install nodejs
-Install npm
-Install MySQL
----------------------------
-Then
-1)cd nodejs
-2)npm install
-3)node index.js
----------------------------
+Application directory: nodejs
+Before running application Check MySQL Server is running.If not then start MySQL server.
+then,
+
+Step1 ] -> cd nodejs
+Step2 ] -> npm start
+Step3 ] -> node service.js

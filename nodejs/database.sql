@@ -1,15 +1,19 @@
 CREATE USER vishal IDENTIFIED BY 'Vishal@12';
+
 GRANT ALL PRIVILEGES ON *.* to vishal;
 
-CREATE DATABASE userdb;
+DROP DATABASE IF EXISTS userdb;
+
+CREATE DATABASE IF NOT EXISTS userdb;
+
 USE userdb;
 
-CREATE TABLE `user`(
+CREATE TABLE `user_details`(
 	`id` int NOT NULL,
 	`name` varchar(20) NOT NULL,
 	`age` int NOT NULL,
 	`department` varchar(20) NOT NULL,
 	`subject` varchar(20) NOT NULL
-	)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+	)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 	
-insert into user values(1,'Vishal',25,'computer','cs');
+DESCRIBE user_details;
