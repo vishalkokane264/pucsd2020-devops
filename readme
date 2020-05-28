@@ -5,6 +5,11 @@ Application directory: nodejs
 Before running application Check MySQL Server is running.If not then start MySQL server.
 then,
 
+Run Docker file using
+docker build -t img1:dockerfile .
+This will install all required dependencies
+
+
 Step1 ] -> cd nodejs
 Step2 ] -> npm start
 Step3 ] -> node service.js
